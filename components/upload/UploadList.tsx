@@ -79,6 +79,9 @@ export default class UploadList extends React.Component<UploadListProps, any> {
             icon = <Icon className={`${prefixCls}-list-item-thumbnail`} type="picture" />;
           }
         } else {
+          let url = (file.thumbUrl || file.url) + '';
+          let img = <img src={file.thumbUrl || file.url} alt={file.name} />;
+          let video = <video src={file.thumbUrl || file.url} />;
           icon = (
             <a
               className={`${prefixCls}-list-item-thumbnail`}
@@ -87,7 +90,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={file.thumbUrl || file.url} alt={file.name} />
+              {/(^data:image\/)|(\.(png|jpe?g|gif|svg)(\?.*)?$)/.test(url) ? img : video}
             </a>
           );
         }
