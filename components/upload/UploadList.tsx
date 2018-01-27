@@ -139,6 +139,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
       };
       const previewIcon = showPreviewIcon ? (
         <a
+          className={`${prefixCls}-list-item-preview-icon`}
           href={file.url || file.thumbUrl}
           target="_blank"
           rel="noopener noreferrer"

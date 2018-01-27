@@ -215,6 +215,7 @@ exports[`renders ./components/upload/demo/picture-card.md correctly 1`] = `
           class="ant-upload-list-item-actions"
         >
           <a
+            class="ant-upload-list-item-preview-icon"
             href="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
             rel="noopener noreferrer"
             target="_blank"
